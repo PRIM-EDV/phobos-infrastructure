@@ -1,0 +1,19 @@
+{
+  "name": "@phobos/infrastructure",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@nestjs/common": "~11.1.16",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6"
+  }
+}
