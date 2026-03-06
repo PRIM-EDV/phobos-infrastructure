@@ -11,7 +11,7 @@
   "private": true,
   "dependencies": {
     "@nestjs/common": "~11.1.16",
-    "express": "^5.2.1"
+    "winston": "^3.19.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.6"
