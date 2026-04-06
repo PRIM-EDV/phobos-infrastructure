@@ -9,6 +9,7 @@ const logFormat = Winston.format.printf((info: TransformableInfo) => {
 export const winstonConfig = {
     transports: [
         new Winston.transports.Console({
+            level: 'debug',
             format: Winston.format.combine(
                 Winston.format(info => {
                     info.level = info.level.toUpperCase().padStart(7)
@@ -16,32 +17,6 @@ export const winstonConfig = {
                     return info;
                 })(),
                 Winston.format.colorize({all: false, level: true, message: true}),
-                Winston.format.timestamp({
-                    format: 'YYYY-MM-DD HH:mm:ss'
-                }),
-                logFormat
-            )
-        }),
-        new Winston.transports.File({
-            filename: 'logs/error.log', level: 'error',
-            format: Winston.format.combine(
-                Winston.format(info => {
-                    info.level = info.level.toUpperCase().padStart(7)
-                    return info;
-                })(),
-                Winston.format.timestamp({
-                    format: 'YYYY-MM-DD HH:mm:ss'
-                }),
-                logFormat
-            )
-        }),
-        new Winston.transports.File({
-            filename: 'logs/log.log', level: 'debug',
-            format: Winston.format.combine(
-                Winston.format(info => {
-                    info.level = info.level.toUpperCase().padStart(7)
-                    return info;
-                })(),
                 Winston.format.timestamp({
                     format: 'YYYY-MM-DD HH:mm:ss'
                 }),
