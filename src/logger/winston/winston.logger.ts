@@ -41,11 +41,11 @@ export class WinstonLogger implements LoggerService {
         if (this.levels.includes('debug')) this.logger.debug(msg, { context: context });
     }
 
-    setContext?(context: string) {
+    setContext(context: string) {
         this.context = context;
     }
 
-    setLogLevels?(levels: LogLevel[]) {
+    setLogLevels(levels: LogLevel[]) {
         this.levels = levels;
     }
 }
