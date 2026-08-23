@@ -13,8 +13,9 @@
     "@nestjs/axios": "^4.0.1",
     "@nestjs/common": "~11.1.16",
     "axios": "^1.19.0",
-    "jose": "^6.2.7",
     "http-proxy-middleware": "^4.2.0",
+    "httpxy": "^0.5.5",
+    "jose": "^6.2.7",
     "winston": "^3.19.0"
   },
   "devDependencies": {
